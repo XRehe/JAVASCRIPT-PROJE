@@ -1,0 +1,33 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 50px;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+}
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btn button {
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+#btn button:hover {
+  background-color: #324a84;
+  color: white;
+}
