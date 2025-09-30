@@ -7,3 +7,4 @@
 | 3)Counter      | [Demo](https://counter-lac-seven.vercel.app/)     |
 | 4)To-Do List      | [Demo](https://javascript-proje.vercel.app/)     |
 | 5)Pomodoro      | [Demo](https://javascript-proje-qa63.vercel.app/)     |
+| 6)Quote generator      | local   |
