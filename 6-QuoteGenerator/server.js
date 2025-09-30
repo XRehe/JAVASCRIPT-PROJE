@@ -1,10 +1,13 @@
 import express from "express";
+import fetch from "node-fetch";
 
 const app = express();
 
-app.use(express.static("."));
+// public klasörünü sun
+app.use(express.static("public"));
 
-app.get("/quote", async (req, res) => {
+// API endpoint (local test)
+app.get("/api/quote", async (req, res) => {
   try {
     const response = await fetch("https://zenquotes.io/api/random");
     const data = await response.json();
