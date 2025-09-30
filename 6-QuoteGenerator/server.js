@@ -1,12 +1,12 @@
 import express from "express";
-import fetch from "node-fetch";
+import fetch from "node-fetch"; // Node 22+ kullanıyorsan bunu kaldırıp global fetch kullanabilirsin
 
 const app = express();
 
 // public klasörünü sun
 app.use(express.static("public"));
 
-// API endpoint (local test)
+// API endpoint
 app.get("/api/quote", async (req, res) => {
   try {
     const response = await fetch("https://zenquotes.io/api/random");
@@ -17,4 +17,9 @@ app.get("/api/quote", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Server running at http://localhost:3000"));
+// Port ayarı: Ortam değişkeni varsa onu kullan, yoksa 8080
+const port = process.env.PORT || 8080;
+
+app.listen(port, () =>
+  console.log(`Server running at http://localhost:${port}`)
+);
